@@ -12,4 +12,4 @@ In the project directory, you can run:
 
 ## Login Page Added.
 
-<img src='screenshots/login.PNG'>
+<img src='screenshots/login1.PNG'>
