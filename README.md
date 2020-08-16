@@ -17,3 +17,7 @@ In the project directory, you can run:
 ## Login Page Added.
 
 <img src='screenshots/login1_page.PNG'>
+
+## Dashboard Page Added.
+
+<img src='screenshots/medical_home.PNG'>

@@ -40,6 +40,7 @@ class Login extends React.Component {
       this.setState({ loginStatus: 4 });
     } else {
       this.setState({ loginStatus: 3 });
+      this.props.history.replace("/home");
     }
   };
 
