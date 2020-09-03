@@ -28,6 +28,37 @@ class AuthHandler {
       return false;
     }
   }
+
+  static getLoginToken() {
+    return reactLocalStorage.get("token");
+  }
+
+  static getRefreshToken() {
+    return reactLocalStorage.get("refresh");
+  }
+
+  static logoutUser() {
+    reactLocalStorage.remove("token");
+    reactLocalStorage.remove("refresh");
+  }
+
+  static checkTokenExpiry() {
+    var expire = false;
+    var token = this.getLoginToken();
+    var tokenArray = token.split(".");
+    var jwt = JSON.parse(atob(tokenArray[1]));
+    if (jwt && jwt.exp && Number.isFinite(jwt.exp)) {
+      expire = jwt.exp * 1000;
+    } else {
+      expire = false;
+    }
+
+    if (!expire) {
+      return false;
+    }
+
+    return Date.now() > expire;
+  }
 }
 
 export default AuthHandler;

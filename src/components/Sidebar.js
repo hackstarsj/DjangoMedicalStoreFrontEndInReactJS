@@ -11,6 +11,7 @@ class Sidebar extends React.Component {
   constructor(props) {
     super(props);
     this.divref = React.createRef();
+    this.divref2 = React.createRef();
   }
 
   componentWillMount() {
@@ -22,10 +23,14 @@ class Sidebar extends React.Component {
   }
 
   handleMouseClick = (event) => {
-    console.log("ok");
-    if (event.target === this.divref.current) {
+    if (
+      event.target === this.divref.current ||
+      event.target === this.divref2.current
+    ) {
+      console.log("Click Element");
       return;
     } else {
+      console.log("Click Outside");
       this.setState({ defaultClass: "btn-group user-helper-dropdown" });
     }
   };
@@ -69,7 +74,11 @@ class Sidebar extends React.Component {
                 </i>
                 <ul className="dropdown-menu pull-right">
                   <li>
-                    <a href="#" className=" waves-effect waves-block">
+                    <a
+                      href={Config.logoutPageUrl}
+                      className=" waves-effect waves-block"
+                      ref={this.divref2}
+                    >
                       <i className="material-icons">input</i>Sign Out
                     </a>
                   </li>
