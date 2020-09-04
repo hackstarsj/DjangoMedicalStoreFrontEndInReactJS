@@ -21,3 +21,7 @@ In the project directory, you can run:
 ## Dashboard Page Added.
 
 <img src='screenshots/medical_home.PNG'>
+
+## Add Company Page Added.
+
+<img src='screenshots/add_company1.PNG'>
