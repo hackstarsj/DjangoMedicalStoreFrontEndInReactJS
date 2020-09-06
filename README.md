@@ -25,3 +25,7 @@ In the project directory, you can run:
 ## Add Company Page Added.
 
 <img src='screenshots/add_company1.PNG'>
+
+## View Company Page Added.
+
+<img src='screenshots/view_company.PNG'>
