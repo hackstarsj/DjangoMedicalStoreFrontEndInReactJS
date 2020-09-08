@@ -51,11 +51,14 @@ class MainComponent extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     if (this.state.width > 1150) {
       document.getElementById("root").className = "theme-red";
     } else {
       document.getElementById("root").className = this.state.bodyClass;
     }
+
+    var Page = this.props.page;
 
     return (
       <React.Fragment>
@@ -78,7 +81,7 @@ class MainComponent extends React.Component {
         <Overlay display={this.state.displayOverlay} />
         <Navbar onBarClick={this.onBarClick} />
         <Sidebar activepage={this.props.activepage} />
-        <>{this.props.page}</>
+        <Page {...this.props} />
       </React.Fragment>
     );
   }
