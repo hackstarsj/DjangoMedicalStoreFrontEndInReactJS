@@ -29,3 +29,7 @@ In the project directory, you can run:
 ## View Company Page Added.
 
 <img src='screenshots/view_company.PNG'>
+
+## Edit and Update Company Page Added .
+
+<img src='screenshots/edit_company.png'>
