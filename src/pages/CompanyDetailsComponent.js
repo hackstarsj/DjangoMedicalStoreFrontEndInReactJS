@@ -20,6 +20,7 @@ class CompanyDetailsComponent extends React.Component {
     contact_no: "",
     email: "",
     description: "",
+    dataLoaded: false,
   };
 
   async formSubmit(event) {
@@ -61,13 +62,23 @@ class CompanyDetailsComponent extends React.Component {
     this.setState({ contact_no: companydata.data.data.contact_no });
     this.setState({ email: companydata.data.data.email });
     this.setState({ description: companydata.data.data.description });
-
-    //this.setState({ companyDataList: companydata.data.data });
+    this.setState({ dataLoaded: true });
   }
 
   viewCompanyDetails = (company_id) => {
     console.log(company_id);
     console.log(this.props);
+  };
+
+  AddCompanyBank = () => {
+    this.props.history.push("/addCompanyBank/" + this.props.match.params.id);
+  };
+
+  EditCompanyBank = (company_bank_id) => {
+    console.log(company_bank_id);
+    this.props.history.push(
+      "/editcompanybank/" + this.props.match.params.id + "/" + company_bank_id
+    );
   };
 
   render() {
@@ -81,6 +92,22 @@ class CompanyDetailsComponent extends React.Component {
             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <div className="card">
                 <div className="header">
+                  {this.state.dataLoaded == false ? (
+                    <div className="text-center">
+                      <div class="preloader pl-size-xl">
+                        <div class="spinner-layer">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                   <h2>EDIT Company</h2>
                 </div>
                 <div className="body">
@@ -200,7 +227,31 @@ class CompanyDetailsComponent extends React.Component {
             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <div className="card">
                 <div className="header">
+                  {this.state.dataLoaded == false ? (
+                    <div className="text-center">
+                      <div class="preloader pl-size-xl">
+                        <div class="spinner-layer">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                   <h2>Company Bank</h2>
+                  <div className="header-dropdown m-r--5">
+                    <button
+                      className="btn btn-info"
+                      onClick={this.AddCompanyBank}
+                    >
+                      Add Company
+                    </button>
+                  </div>
                 </div>
                 <div className="body table-responsive">
                   <table className="table table-hover">
@@ -221,6 +272,12 @@ class CompanyDetailsComponent extends React.Component {
                           <td>{company.ifsc_no}</td>
                           <td>{new Date(company.added_on).toLocaleString()}</td>
                           <td>
+                            <button
+                              className="btn btn-block btn-warning"
+                              onClick={() => this.EditCompanyBank(company.id)}
+                            >
+                              EDIT
+                            </button>
                             <button className="btn btn-block btn-danger">
                               DELETE
                             </button>

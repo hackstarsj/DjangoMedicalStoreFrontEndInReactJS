@@ -33,3 +33,11 @@ In the project directory, you can run:
 ## Edit and Update Company Page Added .
 
 <img src='screenshots/edit_company.png'>
+
+## Add Company Bank Page Added .
+
+<img src='screenshots/add_company_bank.PNG'>
+
+## Edit Company Bank Page Added .
+
+<img src='screenshots/edit_company1.PNG'>

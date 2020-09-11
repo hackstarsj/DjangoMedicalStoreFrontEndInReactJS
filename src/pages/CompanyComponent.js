@@ -13,6 +13,7 @@ class CompanyComponent extends React.Component {
     btnMessage: 0,
     sendData: false,
     companyDataList: [],
+    dataLoaded: false,
   };
 
   async formSubmit(event) {
@@ -45,6 +46,7 @@ class CompanyComponent extends React.Component {
     var companydata = await apihandler.fetchAllCompany();
     console.log(companydata);
     this.setState({ companyDataList: companydata.data.data });
+    this.setState({ dataLoaded: true });
   }
 
   viewCompanyDetails = (company_id) => {
@@ -177,6 +179,22 @@ class CompanyComponent extends React.Component {
             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <div className="card">
                 <div className="header">
+                  {this.state.dataLoaded == false ? (
+                    <div className="text-center">
+                      <div class="preloader pl-size-xl">
+                        <div class="spinner-layer">
+                          <div class="circle-clipper left">
+                            <div class="circle"></div>
+                          </div>
+                          <div class="circle-clipper right">
+                            <div class="circle"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                   <h2>All Companies</h2>
                 </div>
                 <div className="body table-responsive">

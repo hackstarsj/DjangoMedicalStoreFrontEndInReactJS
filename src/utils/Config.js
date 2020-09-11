@@ -2,6 +2,7 @@ class Config {
   static loginUrl = "http://127.0.0.1:8000/api/gettoken/";
   static refreshApiUrl = "http://127.0.0.1:8000/api/resfresh_token/";
   static companyApiUrl = "http://127.0.0.1:8000/api/company/";
+  static companyBankApiUrl = "http://127.0.0.1:8000/api/companybank/";
   static homeUrl = "/home";
   static logoutPageUrl = "/logout";
 
