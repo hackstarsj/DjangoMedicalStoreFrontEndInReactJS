@@ -41,3 +41,7 @@ In the project directory, you can run:
 ## Edit Company Bank Page Added .
 
 <img src='screenshots/edit_company1.PNG'>
+
+## Added Add Medicine Page
+
+<img src='screenshots/add_medicine.png'>
