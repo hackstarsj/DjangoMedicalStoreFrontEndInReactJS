@@ -181,13 +181,13 @@ class CompanyComponent extends React.Component {
                 <div className="header">
                   {this.state.dataLoaded == false ? (
                     <div className="text-center">
-                      <div class="preloader pl-size-xl">
-                        <div class="spinner-layer">
-                          <div class="circle-clipper left">
-                            <div class="circle"></div>
+                      <div className="preloader pl-size-xl">
+                        <div className="spinner-layer">
+                          <div className="circle-clipper left">
+                            <div className="circle"></div>
                           </div>
-                          <div class="circle-clipper right">
-                            <div class="circle"></div>
+                          <div className="circle-clipper right">
+                            <div className="circle"></div>
                           </div>
                         </div>
                       </div>
