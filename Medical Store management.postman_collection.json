@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "843085f2-8640-4ba8-b717-d6e5ca11fee4",
+		"name": "Medical Store management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/medicine/18",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTk1NzgyNTAzLCJqdGkiOiJlMDgxY2M5NzBhZmY0MGUwYjQwYjM1OWJjZDY1N2ZiYyIsInVzZXJfaWQiOjF9.geJu3Om9ZCLDP_0KAFt6G7QO4TYp1vfCl76I2RTMFvs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/medicine/18",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"medicine",
+						"18"
+					]
+				},
+				"description": "Medicine Single "
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/gettoken/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"admin\",\"password\":\"admin\"}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/gettoken/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"gettoken",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/medicine/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTk1NzgyNTAzLCJqdGkiOiJlMDgxY2M5NzBhZmY0MGUwYjQwYjM1OWJjZDY1N2ZiYyIsInVzZXJfaWQiOjF9.geJu3Om9ZCLDP_0KAFt6G7QO4TYp1vfCl76I2RTMFvs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"ABC MEDICINE\",\"medical_typ\":\"Tablet\",\"buy_price\":\"200\",\"sell_price\":\"300\",\"c_gst\":\"10\",\"s_gst\":\"10\",\"batch_no\":\"12345\",\"shelf_no\":\"12345\",\"expire_date\":\"2020-10-10\",\"mfg_date\":\"2020-05-05\",\"company_id\":\"2\",\"description\":\"Test Medicine\",\"in_stock_total\":\"100\",\"qty_in_strip\":\"10\",\"medicine_details\":[{\"salt_name\":\"SALT 1\",\"salt_qty\":\"20\",\"salt_qty_type\":\"MG\",\"description\":\"Salt 1 Description\"},{\"salt_name\":\"SALT 2\",\"salt_qty\":\"30\",\"salt_qty_type\":\"MG\",\"description\":\"Salt 2 Description\"}]}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/medicine/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"medicine",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/companyonly/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/companyonly/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companyonly",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/company/2/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTk5NDY0Njk2LCJqdGkiOiI2OThjMzMwZDNiNzk0MjFlOWRmM2I0NzliODRkOTYwOSIsInVzZXJfaWQiOjF9.kkjo23lce4a8qWE_eicgUZb5gpzJEU-SMp8VFnE7nT4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/company/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"company",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
