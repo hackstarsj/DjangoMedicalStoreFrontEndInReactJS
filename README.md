@@ -45,3 +45,7 @@ In the project directory, you can run:
 ## Added Add Medicine Page
 
 <img src='screenshots/add_medicine.png'>
+
+## Added Manage Medicine Page
+
+<img src='screenshots/view_medicine.png'>

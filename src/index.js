@@ -13,6 +13,7 @@ import CompanyDetailsComponent from "./pages/CompanyDetailsComponent";
 import CompanyAddBankComponent from "./pages/CompanyAddBankComponent";
 import CompanyEditBankComponent from "./pages/CompanyEditBankComponent";
 import MedicineAddComponent from "./pages/MedicineAddComponent";
+import MedicineManageComponent from "./pages/MedicineManageComponent";
 
 ReactDOM.render(
   <Router>
@@ -58,6 +59,12 @@ ReactDOM.render(
         path="/addMedicine"
         activepage="2"
         page={MedicineAddComponent}
+      ></PrivateRouteNew>
+      <PrivateRouteNew
+        exact
+        path="/manageMedicine"
+        activepage="3"
+        page={MedicineManageComponent}
       ></PrivateRouteNew>
     </Switch>
   </Router>,
