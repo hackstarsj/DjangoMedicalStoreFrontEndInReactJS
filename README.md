@@ -49,3 +49,7 @@ In the project directory, you can run:
 ## Added Manage Medicine Page
 
 <img src='screenshots/view_medicine.png'>
+
+## Added Update Medicine Details
+
+<img src='screenshots/update_medicine.png'>
