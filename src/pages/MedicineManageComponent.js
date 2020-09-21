@@ -31,14 +31,15 @@ class MedicineManageComponent extends React.Component {
     description1: "",
     in_stock_total: "",
     qty_in_strip: "",
+    total_salt_list: 0,
+    medicine_id: 0,
   };
 
   async formSubmit(event) {
     event.preventDefault();
     this.setState({ btnMessage: 1 });
-
     var apiHandler = new APIHandler();
-    var response = await apiHandler.saveMedicineData(
+    var response = await apiHandler.editMedicineData(
       event.target.name.value,
       event.target.medical_typ.value,
       event.target.buy_price.value,
@@ -53,7 +54,8 @@ class MedicineManageComponent extends React.Component {
       event.target.description1.value,
       event.target.in_stock_total.value,
       event.target.qty_in_strip.value,
-      this.state.medicinedetails
+      this.state.medicinedetails,
+      this.state.medicine_id
     );
     console.log(response);
     this.setState({ btnMessage: 0 });
@@ -76,7 +78,7 @@ class MedicineManageComponent extends React.Component {
   }
 
   RemoveItems = () => {
-    if (this.state.medicinedetails.length != 1) {
+    if (this.state.medicinedetails.length != this.state.total_salt_list) {
       this.state.medicinedetails.pop(this.state.medicinedetails.length - 1);
     }
     this.setState({});
@@ -97,6 +99,7 @@ class MedicineManageComponent extends React.Component {
       salt_qty: "",
       salt_qty_type: "",
       description: "",
+      id: 0,
     };
 
     this.state.medicinedetails.push(item);
@@ -105,7 +108,7 @@ class MedicineManageComponent extends React.Component {
 
   viewmedicineDetails = (index) => {
     console.log(this.state.medicineDataList[index]);
-
+    this.setState({ medicine_id: this.state.medicineDataList[index].id });
     this.setState({ name: this.state.medicineDataList[index].name });
     this.setState({
       medical_typ: this.state.medicineDataList[index].medical_typ,
@@ -133,6 +136,10 @@ class MedicineManageComponent extends React.Component {
     });
     this.setState({
       qty_in_strip: this.state.medicineDataList[index].qty_in_strip,
+    });
+    this.setState({
+      total_salt_list: this.state.medicineDataList[index].medicine_details
+        .length,
     });
     this.setState({
       medicinedetails: this.state.medicineDataList[index].medicine_details,
@@ -508,8 +515,8 @@ class MedicineManageComponent extends React.Component {
                       disabled={this.state.btnMessage == 0 ? false : true}
                     >
                       {this.state.btnMessage == 0
-                        ? "Add Medicine"
-                        : "Adding Medicine Please Wait.."}
+                        ? "Edit Medicine"
+                        : "Updating Medicine Please Wait.."}
                     </button>
                     <br />
                     {this.state.errorRes == false &&
