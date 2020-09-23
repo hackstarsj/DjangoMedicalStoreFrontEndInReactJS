@@ -113,9 +113,15 @@
 			"name": "http://127.0.0.1:8000/api/companyonly/",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAwODQxMTMxLCJqdGkiOiIxODU0Yzc0N2JiNWI0YTFiODFmZWQzMjhkMmFkNjhkYiIsInVzZXJfaWQiOjF9.I_WTz9OoTuN98uPVkGq57gFWDFDpf07qtoNIXaey3-I",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/companyonly/",
+					"raw": "http://127.0.0.1:8000/api/companyaccount/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -126,7 +132,7 @@
 					"port": "8000",
 					"path": [
 						"api",
-						"companyonly",
+						"companyaccount",
 						""
 					]
 				}
@@ -168,6 +174,37 @@
 						""
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/companyaccount/",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAwODQxMTMxLCJqdGkiOiIxODU0Yzc0N2JiNWI0YTFiODFmZWQzMjhkMmFkNjhkYiIsInVzZXJfaWQiOjF9.I_WTz9OoTuN98uPVkGq57gFWDFDpf07qtoNIXaey3-I",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/companyaccount/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companyaccount",
+						""
+					]
+				},
+				"description": "Make Request for Company Account Data"
 			},
 			"response": []
 		}

@@ -60,6 +60,16 @@ class APIHandler {
     return response;
   }
 
+  async fetchAllCompanyAccount() {
+    await this.checkLogin();
+
+    var response = await Axios.get(Config.companyAccountApiUrl, {
+      headers: { Authorization: "Bearer " + AuthHandler.getLoginToken() },
+    });
+
+    return response;
+  }
+
   async fetchCompanyDetails(id) {
     await this.checkLogin();
 
@@ -246,6 +256,31 @@ class APIHandler {
         in_stock_total: in_stock_total,
         qty_in_strip: qty_in_strip,
         medicine_details: medicinedetails,
+      },
+      { headers: { Authorization: "Bearer " + AuthHandler.getLoginToken() } }
+    );
+
+    return response;
+  }
+
+  async saveCompanyTransactionData(
+    company_id,
+    transaction_type,
+    transaction_amt,
+    transaction_date,
+    payment_mode
+  ) {
+    await this.checkLogin();
+    //Wait Until Token Get Updated
+
+    var response = await Axios.post(
+      Config.companyAccountApiUrl,
+      {
+        company_id: company_id,
+        transaction_type: transaction_type,
+        transaction_amt: transaction_amt,
+        transaction_date: transaction_date,
+        payment_mode: payment_mode,
       },
       { headers: { Authorization: "Bearer " + AuthHandler.getLoginToken() } }
     );

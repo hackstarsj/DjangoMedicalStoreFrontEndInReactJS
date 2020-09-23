@@ -53,3 +53,7 @@ In the project directory, you can run:
 ## Added Update Medicine Details
 
 <img src='screenshots/update_medicine.png'>
+
+## Added Company Transaction Account
+
+<img src='screenshots/company_account.PNG'>
