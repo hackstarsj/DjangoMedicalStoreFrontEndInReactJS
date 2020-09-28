@@ -287,6 +287,34 @@ class APIHandler {
 
     return response;
   }
+
+  async fetchEmployee() {
+    await this.checkLogin();
+
+    var response = await Axios.get(Config.employeeApiURL, {
+      headers: { Authorization: "Bearer " + AuthHandler.getLoginToken() },
+    });
+
+    return response;
+  }
+
+  async saveEmployeeData(name, joining_date, phone, address) {
+    await this.checkLogin();
+    //Wait Until Token Get Updated
+
+    var response = await Axios.post(
+      Config.employeeApiURL,
+      {
+        name: name,
+        joining_date: joining_date,
+        phone: phone,
+        address: address,
+      },
+      { headers: { Authorization: "Bearer " + AuthHandler.getLoginToken() } }
+    );
+
+    return response;
+  }
 }
 
 export default APIHandler;
