@@ -57,3 +57,7 @@ In the project directory, you can run:
 ## Added Company Transaction Account
 
 <img src='screenshots/company_account.PNG'>
+
+## Added Employee Manage
+
+<img src='screenshots/employee.PNG'>
