@@ -60,4 +60,4 @@ In the project directory, you can run:
 
 ## Added Employee Manage
 
-<img src='screenshots/employee.PNG'>
+<img src='screenshots/employee.png'>
