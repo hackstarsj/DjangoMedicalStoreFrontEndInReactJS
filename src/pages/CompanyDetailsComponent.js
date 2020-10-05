@@ -282,6 +282,7 @@ class CompanyDetailsComponent extends React.Component {
                               DELETE
                             </button>
                           </td>
+                          <td>Test</td>
                         </tr>
                       ))}
                     </tbody>

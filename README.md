@@ -61,3 +61,7 @@ In the project directory, you can run:
 ## Added Employee Manage
 
 <img src='screenshots/employee.png'>
+
+## Added Employee Manage Complete Edit Employee | Manage Salary and Manage Bank
+
+<img src='screenshots/employee-medicine.png'>

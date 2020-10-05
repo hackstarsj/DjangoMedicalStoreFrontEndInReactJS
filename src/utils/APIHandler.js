@@ -315,6 +315,88 @@ class APIHandler {
 
     return response;
   }
+
+  async fetchEmployeeById(id) {
+    await this.checkLogin();
+
+    var response = await Axios.get(Config.employeeApiURL + "" + id + "/", {
+      headers: { Authorization: "Bearer " + AuthHandler.getLoginToken() },
+    });
+
+    return response;
+  }
+
+  async editEmployeeData(name, joining_date, phone, address, id) {
+    await this.checkLogin();
+    //Wait Until Token Get Updated
+
+    var response = await Axios.put(
+      Config.employeeApiURL + "" + id + "/",
+      {
+        name: name,
+        joining_date: joining_date,
+        phone: phone,
+        address: address,
+      },
+      { headers: { Authorization: "Bearer " + AuthHandler.getLoginToken() } }
+    );
+
+    return response;
+  }
+
+  async fetchSalaryEmployee(id) {
+    await this.checkLogin();
+
+    var response = await Axios.get(Config.employeeSalaryByIdApiUrl + "" + id, {
+      headers: { Authorization: "Bearer " + AuthHandler.getLoginToken() },
+    });
+
+    return response;
+  }
+
+  async fetchBankEmployee(id) {
+    await this.checkLogin();
+
+    var response = await Axios.get(Config.employeeBankApiUrlBYID + "" + id, {
+      headers: { Authorization: "Bearer " + AuthHandler.getLoginToken() },
+    });
+
+    return response;
+  }
+
+  async AddEmployeeSalaryData(salary_date, salary_amount, employee_id) {
+    await this.checkLogin();
+    //Wait Until Token Get Updated
+
+    var response = await Axios.post(
+      Config.employeeSalaryApiUrl,
+      {
+        salary_date: salary_date,
+        salary_amount: salary_amount,
+        employee_id: employee_id,
+      },
+      { headers: { Authorization: "Bearer " + AuthHandler.getLoginToken() } }
+    );
+
+    return response;
+  }
+
+  async AddEmployeeBankData(bank_account_no, ifsc_no, employee_id) {
+    await this.checkLogin();
+    //Wait Until Token Get Updated
+
+    var response = await Axios.post(
+      Config.employeeBankApiUrl,
+      {
+        bank_account_no: bank_account_no,
+        ifsc_no: ifsc_no,
+        employee_id: employee_id,
+      },
+      { headers: { Authorization: "Bearer " + AuthHandler.getLoginToken() } }
+    );
+
+    return response;
+  }
 }
 
 export default APIHandler;

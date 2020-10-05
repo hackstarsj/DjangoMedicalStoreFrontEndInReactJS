@@ -207,6 +207,66 @@
 				"description": "Make Request for Company Account Data"
 			},
 			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/employee_bankby_id/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAxNzg4NjIzLCJqdGkiOiJjNjBhMWYzM2Q2MjU0YWZlODZlNTZiN2EzNzIyZDBjYiIsInVzZXJfaWQiOjF9.zz0bTj6wmJa1e4iKelZNPQFB5haIF0AXuCjD_m3A3Mk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee_bankby_id/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee_bankby_id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/employee_salaryby_id/2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAxNzk5MTQyLCJqdGkiOiI0MDIyOTc4MTE5Yzg0MzA3OWRhYjhmMTRiZGE1NTBmOCIsInVzZXJfaWQiOjF9.l0rT9iW7nnf7H63ae_CSUWJu7ilzOOnfUs9CFFwnV4M",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employee_salaryby_id/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee_salaryby_id",
+						"2"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"protocolProfileBehavior": {}

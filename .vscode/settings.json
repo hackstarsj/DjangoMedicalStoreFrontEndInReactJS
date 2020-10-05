@@ -1,4 +1,5 @@
 {
   "editor.formatOnSave": true,
-  "editor.fontSize": 18
+  "editor.fontSize": 18,
+  "window.zoomLevel": 2
 }
