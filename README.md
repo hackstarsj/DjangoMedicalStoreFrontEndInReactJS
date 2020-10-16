@@ -65,3 +65,7 @@ In the project directory, you can run:
 ## Added Employee Manage Complete Edit Employee | Manage Salary and Manage Bank
 
 <img src='screenshots/employee-medicine.png'>
+
+## Added Bill Generate Form
+
+<img src='screenshots/bill.png'>

@@ -44,6 +44,12 @@ class Config {
       url: "/employeeManage",
       icons: "assessment",
     },
+    {
+      index: "6",
+      title: "Generate Bill",
+      url: "/generateBill",
+      icons: "assessment",
+    },
   ];
 }
 
