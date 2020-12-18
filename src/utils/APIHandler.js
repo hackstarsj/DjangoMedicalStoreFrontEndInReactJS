@@ -80,6 +80,20 @@ class APIHandler {
     return response;
   }
 
+  async fetchMedicineByName(name) {
+    if (name != "") {
+      await this.checkLogin();
+
+      var response = await Axios.get(Config.medicineNameApiUrl + "" + name, {
+        headers: { Authorization: "Bearer " + AuthHandler.getLoginToken() },
+      });
+
+      return response;
+    } else {
+      return { data: [] };
+    }
+  }
+
   async editCompanyData(
     name,
     license_no,
