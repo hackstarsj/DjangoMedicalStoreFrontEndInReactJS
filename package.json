@@ -13,6 +13,7 @@
     "react-google-font-loader": "^1.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-to-pdf": "0.0.13",
     "reactjs-localstorage": "^1.0.1"
   },
   "scripts": {

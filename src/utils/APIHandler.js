@@ -149,6 +149,25 @@ class APIHandler {
     return response;
   }
 
+  async generateBill(name, address, phone, medicineDetails) {
+    await this.checkLogin();
+
+    var response = await Axios.post(
+      Config.generateBillApiUrl,
+      {
+        name: name,
+        address: address,
+        contact: phone,
+        medicine_details: medicineDetails,
+      },
+      {
+        headers: { Authorization: "Bearer " + AuthHandler.getLoginToken() },
+      }
+    );
+
+    return response;
+  }
+
   async editCompanyBankData(bank_account_no, ifsc_no, company_id, id) {
     await this.checkLogin();
     //Wait Until Token Get Updated

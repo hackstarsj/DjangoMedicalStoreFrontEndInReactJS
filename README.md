@@ -69,3 +69,7 @@ In the project directory, you can run:
 ## Added Bill Generate Form
 
 <img src='screenshots/bill.png'>
+
+## Added Bill Generate Print
+
+<img src='screenshots/bill_generate2.PNG.png'>
