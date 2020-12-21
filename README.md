@@ -72,4 +72,4 @@ In the project directory, you can run:
 
 ## Added Bill Generate Print
 
-<img src='screenshots/bill_generate2.PNG.png'>
+<img src='screenshots/bill_generate2.PNG'>
