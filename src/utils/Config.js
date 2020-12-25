@@ -2,6 +2,7 @@ class Config {
   static loginUrl = "http://127.0.0.1:8000/api/gettoken/";
   static refreshApiUrl = "http://127.0.0.1:8000/api/resfresh_token/";
   static companyApiUrl = "http://127.0.0.1:8000/api/company/";
+  static customerRequestApiUrl = "http://127.0.0.1:8000/api/customer_request/";
   static medicineNameApiUrl = "http://127.0.0.1:8000/api/medicinebyname/";
   static companyBankApiUrl = "http://127.0.0.1:8000/api/companybank/";
   static generateBillApiUrl = "http://127.0.0.1:8000/api/generate_bill_api/";
@@ -50,6 +51,12 @@ class Config {
       index: "6",
       title: "Generate Bill",
       url: "/generateBill",
+      icons: "assessment",
+    },
+    {
+      index: "7",
+      title: "Customer Request",
+      url: "/customerRequest",
       icons: "assessment",
     },
   ];
