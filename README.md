@@ -73,3 +73,7 @@ In the project directory, you can run:
 ## Added Bill Generate Print
 
 <img src='screenshots/bill_generate2.PNG'>
+
+## Added Customer Request Page
+
+<img src='screenshots/customer_request.PNG'>
