@@ -60,6 +60,16 @@ class APIHandler {
     return response;
   }
 
+  async fetchHomePage() {
+    await this.checkLogin();
+
+    var response = await Axios.get(Config.homeApiUrl, {
+      headers: { Authorization: "Bearer " + AuthHandler.getLoginToken() },
+    });
+
+    return response;
+  }
+
   async fetchAllCustomerRequest() {
     await this.checkLogin();
 

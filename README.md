@@ -77,3 +77,7 @@ In the project directory, you can run:
 ## Added Customer Request Page
 
 <img src='screenshots/customer_request.PNG'>
+
+## Added Homepage Part 1
+
+<img src='screenshots/home1.PNG'>
