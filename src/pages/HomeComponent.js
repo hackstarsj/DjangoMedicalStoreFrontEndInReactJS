@@ -3,6 +3,10 @@ import APIHandler from "../utils/APIHandler";
 
 class HomeComponent extends React.Component {
   //This Method Work When Our Page is Ready
+  constructor(props) {
+    super(props);
+    this.chart = React.createRef();
+  }
 
   state = {
     customer_request: 0,
@@ -17,6 +21,7 @@ class HomeComponent extends React.Component {
     profit_amt_today: 0,
     sell_amt_today: 0,
     medicine_expire_serializer_data: 0,
+    dataPoints: [],
   };
 
   componentDidMount() {
