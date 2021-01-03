@@ -81,3 +81,7 @@ In the project directory, you can run:
 ## Added Homepage Part 1
 
 <img src='screenshots/home1.PNG'>
+
+## Added Homepage Part 2 Charts
+
+<img src='screenshots/home.PNG'>
