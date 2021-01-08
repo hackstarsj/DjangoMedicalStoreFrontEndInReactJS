@@ -1,21 +1,31 @@
 class Config {
-  BASE_URL = "https://medicalstoreapi.herokuapp.com/";
-  static loginUrl = this.this.BASE_URL + "api/gettoken/";
-  static refreshApiUrl = this.BASE_URL + "api/resfresh_token/";
-  static companyApiUrl = this.BASE_URL + "api/company/";
-  static homeApiUrl = this.BASE_URL + "api/home_api/";
-  static customerRequestApiUrl = this.BASE_URL + "api/customer_request/";
-  static medicineNameApiUrl = this.BASE_URL + "api/medicinebyname/";
-  static companyBankApiUrl = this.BASE_URL + "api/companybank/";
-  static generateBillApiUrl = this.BASE_URL + "api/generate_bill_api/";
-  static companyAccountApiUrl = this.BASE_URL + "api/companyaccount/";
-  static companyOnly = this.BASE_URL + "api/companyonly/";
-  static employeeApiURL = this.BASE_URL + "api/employee/";
-  static medicineApiUrl = this.BASE_URL + "api/medicine/";
-  static employeeBankApiUrl = this.BASE_URL + "api/employee_all_bank/";
-  static employeeBankApiUrlBYID = this.BASE_URL + "api/employee_bankby_id/";
-  static employeeSalaryApiUrl = this.BASE_URL + "api/employee_all_salary/";
-  static employeeSalaryByIdApiUrl = this.BASE_URL + "api/employee_salaryby_id/";
+  //BASE_URL = "https://medicalstoreapi.herokuapp.com/";
+  static loginUrl = "https://medicalstoreapi.herokuapp.com/api/gettoken/";
+  static refreshApiUrl =
+    "https://medicalstoreapi.herokuapp.com/api/resfresh_token/";
+  static companyApiUrl = "https://medicalstoreapi.herokuapp.com/api/company/";
+  static homeApiUrl = "https://medicalstoreapi.herokuapp.com/api/home_api/";
+  static customerRequestApiUrl =
+    "https://medicalstoreapi.herokuapp.com/api/customer_request/";
+  static medicineNameApiUrl =
+    "https://medicalstoreapi.herokuapp.com/api/medicinebyname/";
+  static companyBankApiUrl =
+    "https://medicalstoreapi.herokuapp.com/api/companybank/";
+  static generateBillApiUrl =
+    "https://medicalstoreapi.herokuapp.com/api/generate_bill_api/";
+  static companyAccountApiUrl =
+    "https://medicalstoreapi.herokuapp.com/api/companyaccount/";
+  static companyOnly = "https://medicalstoreapi.herokuapp.com/api/companyonly/";
+  static employeeApiURL = "https://medicalstoreapi.herokuapp.com/api/employee/";
+  static medicineApiUrl = "https://medicalstoreapi.herokuapp.com/api/medicine/";
+  static employeeBankApiUrl =
+    "https://medicalstoreapi.herokuapp.com/api/employee_all_bank/";
+  static employeeBankApiUrlBYID =
+    "https://medicalstoreapi.herokuapp.com/api/employee_bankby_id/";
+  static employeeSalaryApiUrl =
+    "https://medicalstoreapi.herokuapp.com/api/employee_all_salary/";
+  static employeeSalaryByIdApiUrl =
+    "https://medicalstoreapi.herokuapp.com/api/employee_salaryby_id/";
   static homeUrl = "/home";
   static logoutPageUrl = "/logout";
 
