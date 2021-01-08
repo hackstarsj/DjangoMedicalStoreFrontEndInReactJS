@@ -3,6 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 For Deploy React APP in HEROKU
 
 ## Signup in HEROKU
+<pre>https://dashboard.heroku.com/apps</pre>
 
 ## Install React JS
 <pre>npm install -g create-react-app</pre>
