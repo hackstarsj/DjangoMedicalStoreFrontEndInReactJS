@@ -5,38 +5,38 @@ For Deploy React APP in HEROKU
 ## Signup in HEROKU
 
 ## Install React JS
-npm install -g create-react-app
+<pre>npm install -g create-react-app</pre>
 
 ## Create React APP
-create-react-app my-app
+<pre>create-react-app my-app</pre>
 
 ## Switch to React Project Directory
-cd my-app
+<pre>cd my-app</pre>
 
 ## Intialize Git
-git init
+<pre>git init</pre>
 
 
 ## Download Heroku Login
-https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+<pre>https://devcenter.heroku.com/articles/heroku-cli#download-and-install</pre>
 
 ## Login To Heroku
-heroku login
+<pre>heroku login</pre>
 
 ## Create Project in Heroku
-heroku create -b https://github.com/mars/create-react-app-buildpack.git
+<pre>heroku create -b https://github.com/mars/create-react-app-buildpack.git</pre>
 
 ## Add File in Git
-git add .
+<pre>git add .</pre>
 
 ## Commit File in git
-git commit -m "react-create-app on Heroku"
+<pre>git commit -m "react-create-app on Heroku"</pre>
 
 ## Push Project to Heroku
-git push heroku master
+<pre>git push heroku master</pre>
 
 ## Open Project in URL
-heroku open
+<pre>heroku open</pre>
 
 ## ============PROJECT DETAILS=============================
 
