@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Live Project LINK 
 <a href="https://pacific-falls-18076.herokuapp.com/">https://pacific-falls-18076.herokuapp.com/</a>
 
+## Login DETAILS
+<pre>USername : admin</pre>
+<pre>Password : admin</pre>
+
 For Deploy React APP in HEROKU
 
 ## Signup in HEROKU
