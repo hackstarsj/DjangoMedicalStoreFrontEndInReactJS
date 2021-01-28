@@ -159,19 +159,21 @@ class APIHandler {
     return response;
   }
 
-  async saveCustomerRequestData(name, phone, medicine_details) {
+  async saveCustomerRequestData(name, phone, medicine_details, prescription) {
     await this.checkLogin();
     //Wait Until Token Get Updated
+    var formData = new FormData();
+    formData.append("customer_name", name);
+    formData.append("phone", phone);
+    formData.append("medicine_details", medicine_details);
+    formData.append("prescription", prescription);
 
-    var response = await Axios.post(
-      Config.customerRequestApiUrl,
-      {
-        customer_name: name,
-        phone: phone,
-        medicine_details: medicine_details,
+    var response = await Axios.post(Config.customerRequestApiUrl, formData, {
+      headers: {
+        Authorization: "Bearer " + AuthHandler.getLoginToken(),
+        "Content-Type": "multipart/form-data",
       },
-      { headers: { Authorization: "Bearer " + AuthHandler.getLoginToken() } }
-    );
+    });
 
     return response;
   }

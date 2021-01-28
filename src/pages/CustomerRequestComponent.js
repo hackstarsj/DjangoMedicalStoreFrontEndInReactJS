@@ -28,7 +28,8 @@ class CustomerRequestComponent extends React.Component {
     var response = await apiHandler.saveCustomerRequestData(
       event.target.name.value,
       event.target.phone.value,
-      event.target.medicine_details.value
+      event.target.medicine_details.value,
+      event.target.prescription.files[0]
     );
     console.log(response);
     this.setState({ btnMessage: 0 });
@@ -121,6 +122,17 @@ class CustomerRequestComponent extends React.Component {
                         />
                       </div>
                     </div>
+                    <label htmlFor="email_address">Prescription</label>
+                    <div className="form-group">
+                      <div className="form-line">
+                        <input
+                          type="file"
+                          id="prescription"
+                          name="prescription"
+                          className="form-control"
+                        />
+                      </div>
+                    </div>
                     <br />
                     <button
                       type="submit"
@@ -184,6 +196,7 @@ class CustomerRequestComponent extends React.Component {
                         <th>NAME</th>
                         <th>Phone</th>
                         <th>Medicine Details</th>
+                        <th>PRESCRIPTION</th>
                         <th>Status</th>
                         <th>Added On</th>
                         <th>Action</th>
@@ -197,6 +210,16 @@ class CustomerRequestComponent extends React.Component {
                             <td>{CustomerRequest.customer_name}</td>
                             <td>{CustomerRequest.phone}</td>
                             <td>{CustomerRequest.medicine_details}</td>
+                            <td>
+                              {CustomerRequest.prescription == null ? (
+                                ""
+                              ) : (
+                                <img
+                                  src={CustomerRequest.prescription}
+                                  style={{ width: 100, height: 100 }}
+                                />
+                              )}
+                            </td>
                             <td>
                               {CustomerRequest.status == 0
                                 ? "Pending"
